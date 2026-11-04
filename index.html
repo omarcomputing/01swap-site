@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>01swap</title>
-    <script type="module" crossorigin src="./assets/index-DrtEbhU6.js"></script>
+    <script type="module" crossorigin src="./assets/index-DPnoGSii.js"></script>
     <link rel="stylesheet" crossorigin href="./assets/index-D_oqXhxO.css">
   </head>
   <body>
@@ -14,6 +14,10 @@
         <button id="nav-buy" class="tab" data-view="buy">Buy</button>
         <button id="nav-sell" class="tab" data-view="sell">Sell</button>
         <button id="nav-about" class="tab" data-view="about">About</button>
+        <!-- Hidden until chain.isOperator() says the connected wallet IS the
+             contract owner. Hiding is convenience, not a permission: the
+             contract rejects every owner action from anyone else. -->
+        <button id="nav-operator" class="tab" data-view="operator" hidden>Operator</button>
       </nav>
       <div id="wallet" class="wallet"></div>
     </header>
