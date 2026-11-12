@@ -4,13 +4,27 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>01swap</title>
+    <meta name="description" content="Buy and sell files peer to peer. Encrypted in your browser, stored for a fixed term, and unlocked by a key that never leaves the contract. No server, no account, no custody." />
+    <!-- ABSOLUTE, unlike every other URL here, because link-preview scrapers do
+         not resolve relative ones. VITE_PUBLIC_URL carries the subpath that
+         VITE_CANONICAL_HOST cannot (that is a bare hostname, matched against
+         location.hostname); preflight pins its host to the canonical one so
+         the card can never advertise somewhere this bundle would refuse to
+         run, and it follows the bundle to ArNS on the next build. -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="01swap" />
+    <meta property="og:title" content="01swap" />
+    <meta property="og:description" content="Buy and sell files peer to peer. Encrypted in your browser, stored for a fixed term, and unlocked by a key that never leaves the contract. No server, no account, no custody." />
+    <meta property="og:url" content="https://omarcomputing.github.io/01swap-site/" />
+    <meta property="og:image" content="https://omarcomputing.github.io/01swap-site/og.png" />
+    <meta name="twitter:card" content="summary_large_image" />
     <!-- RELATIVE, not root-absolute: under a bare arweave.net/<txid>/ manifest
          a leading / resolves against the gateway and 404s. That is also why
          the icon is declared at all -- the browser's implicit /favicon.ico
          probe is root-absolute and can never work here. See docs/favicon.md. -->
     <link rel="icon" href="./favicon.ico" sizes="16x16 32x32 48x48" />
     <link rel="apple-touch-icon" href="./apple-touch-icon.png" />
-    <script type="module" crossorigin src="./assets/index-A9UQZWJQ.js"></script>
+    <script type="module" crossorigin src="./assets/index-Dj3zdZn2.js"></script>
     <link rel="stylesheet" crossorigin href="./assets/index-DZOodqVL.css">
   </head>
   <body>
@@ -32,7 +46,13 @@
       </nav>
       <div id="wallet" class="wallet"></div>
     </header>
-    <main id="view"></main>
+    <main id="view"><noscript>
+      <p style="max-width:52ch;margin:28px auto;padding:0 20px">
+        01swap needs JavaScript. Files are encrypted and decrypted in your
+        browser and the key is fetched from a contract, so there is nothing a
+        server could render here instead.
+      </p>
+    </noscript></main>
     <footer>
       <p>
         Files are encrypted in your browser and stored for a fixed term the
